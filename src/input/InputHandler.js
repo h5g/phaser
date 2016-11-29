@@ -678,12 +678,11 @@ Phaser.InputHandler.prototype = {
     */
     checkPointerDown: function (pointer, fastTest) {
 
-        if (!pointer.isDown ||
-            !this.enabled ||
+        if (!this.enabled ||
             !this.sprite ||
             !this.sprite.parent ||
             !this.sprite.visible ||
-            !this.sprite.parent.visible |
+            !this.sprite.parent.visible ||
             this.sprite.worldScale.x === 0 ||
             this.sprite.worldScale.y === 0)
         {
@@ -723,12 +722,11 @@ Phaser.InputHandler.prototype = {
     */
     checkPointerOver: function (pointer, fastTest) {
 
-        if (!pointer.isDown ||
-            !this.enabled ||
+        if (!this.enabled ||
             !this.sprite ||
             !this.sprite.parent ||
             !this.sprite.visible ||
-            !this.sprite.parent.visible |
+            !this.sprite.parent.visible ||
             this.sprite.worldScale.x === 0 ||
             this.sprite.worldScale.y === 0)
         {
