@@ -7,7 +7,7 @@
 *
 * Phaser - http://phaser.io
 *
-* v2.4.8 "Watch Hill" - Built: Thu May 19 2016 12:22:36
+* v2.4.8 "Watch Hill" - Built: Tue Nov 29 2016 19:11:32
 *
 * By Richard Davey http://www.photonstorm.com @photonstorm
 *
@@ -26943,12 +26943,11 @@ Phaser.InputHandler.prototype = {
     */
     checkPointerDown: function (pointer, fastTest) {
 
-        if (!pointer.isDown ||
-            !this.enabled ||
+        if (!this.enabled ||
             !this.sprite ||
             !this.sprite.parent ||
             !this.sprite.visible ||
-            !this.sprite.parent.visible |
+            !this.sprite.parent.visible ||
             this.sprite.worldScale.x === 0 ||
             this.sprite.worldScale.y === 0)
         {
@@ -26988,12 +26987,11 @@ Phaser.InputHandler.prototype = {
     */
     checkPointerOver: function (pointer, fastTest) {
 
-        if (!pointer.isDown ||
-            !this.enabled ||
+        if (!this.enabled ||
             !this.sprite ||
             !this.sprite.parent ||
             !this.sprite.visible ||
-            !this.sprite.parent.visible |
+            !this.sprite.parent.visible ||
             this.sprite.worldScale.x === 0 ||
             this.sprite.worldScale.y === 0)
         {
